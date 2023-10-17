@@ -1,0 +1,16 @@
+.image-button {
+    display: inline-block;
+    margin: 10px; /* Adjust the margin as needed for spacing between the buttons */
+  }
+  
+  /* Adjust the size of the images */
+  .image-button img {
+    width: 50px; /* Set the width of the image */
+    height: 50px; /* Set the height of the image */
+  }
+  
+  /* Add hover effect for the buttons */
+  .image-button:hover {
+    transform: scale(1.1); /* Increase the size on hover */
+    
+  }

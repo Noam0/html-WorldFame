@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" type="module"></script>
+    <script src="menuButtonsScript.js" type="module"></script>
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="lowRowButton.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <div class="overlay"></div>
+  
+    <div class="menu-container">
+        <img src="others\logo.png" alt="Logo" class="logo" id = logo> <!-- Add your logo here -->
+        <div class="menu">
+            <button class="menuButton" id="Play">Play</button>
+            <button class="menuButton" id="howToPlayButton">How to Play</button>
+            <button class="menuButton" id="rankingButton">Ranking</button>
+        </div>
+
+    </div>
+    
+    <div class="popup-container"> <!-- a container for a popup massage-->
+      <div class="popup" id="popup">
+        <img src="others/tick.png">
+        <h2>How To Play:</h2>
+        <ol>
+          <li>Click on the "Draw Card" button to draw a card from the deck.</li>
+          <li>Based on the drawn card, follow the instructions for each stage of the game.</li>
+          <li>Complete each stage to progress through the game.</li>
+          <li>Make correct choices to win World Fame!</li>
+        </ol>
+        <button type="button" id="closeBtn">OK</button>
+      </div>
+    </div>
+    <!-- stage display popup-->
+    <h1 id="stagePopup" class="stage-popup"><h1>
+
+    <!-- the wrong answer popup-->
+    <div class="wrong-answer-popup" id="wrongAnswerPopup">
+      <div class="popup-content">
+        <span class="popup-close" id="popupClose">&times;</span>
+        <h1 id = wrongGuessText>Wrong Guess</h1>
+        <button id="restartButtonPopup">Restart</button>
+      </div>
+    </div>
+
+    <div class="grid-container" id = gamePlate >
+      <div class="row headline">
+         <h1 class = stageText>what is the next card color? </h1>
+         <h1 class = ErrorText id = errorText> </h1>
+      </div> <!-- row for the instructions of the stage-->
+
+      <div class="row interactive">
+        <button id = gamePlayButton1>first button</button>
+        <button id = gamePlayButton2>second button</button>
+        <button id = gamePlayButton3>third button</button>
+        <button id = gamePlayButton4>fourth button</button>
+        
+      </div> <!-- row for the buttons-->
+
+      <div class="row middle"> <!-- row to show the cards-->
+        <!-- Nested grid for the middle row -->
+        <div class="nested-grid">
+          <div class="col">
+            <div class="card" id = deck>
+                <img src="others/cardback.png" alt="Card Back">
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" id = card1><i class="fa-solid fa-crown"></i></div>
+          </div>
+          <div class="col">
+            <div class="card" id = card2><i class="fa-solid fa-crown"></i></div>
+          </div>
+          <div class="col">
+            <div class="card" id = card3><i class="fa-solid fa-crown"></i></div>
+          </div>
+          <div class="col">
+            <div class="card" id = card4><i class="fa-solid fa-crown"></i></div>
+          </div>
+          <div class="col">
+            <div class="card" id = card5><i class="fa-solid fa-crown"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="row lower">
+        <a href="#" id="restartButton" class="image-button">
+          <img src="icons\restart.png" alt="Restart Button">
+        </a>
+        <a href="#" id="XButton" class="image-button">
+          <img src="icons\X.png" alt="X Button">
+        </a>
+        <a href="#" id="PositionButton" class="image-button">
+          <img src="icons\Position.png" alt="Position Button">
+        </a>
+        <a href="#" id="infoButton" class="image-button">
+          <img src="icons\info.png" alt="Info Button">
+        </a>
+
+      </div><!-- row to show the smaller button such as how to play, and ranking or restart-->
+    </div>
+  
+
+  </body>
+  </html>

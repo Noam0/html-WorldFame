@@ -1,0 +1,265 @@
+/* styles.css */
+
+body {
+    /*background: linear-gradient(165deg, #faf8c2, #fff6c0);*/
+   /* Set the background image and position it */
+   background-image: url('others/Background.png');
+   background-size: cover; /* Adjust the background size to cover the entire body */
+   background-position: center; /* Center the background image */
+   background-repeat: no-repeat; /* Prevent the background from repeating */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Use min-height instead of height to ensure the body expands with content */
+
+  display: grid; /* Use CSS Grid to center the elements */
+  place-items: center; /* Center both horizontally and vertically */
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-rows: 10% 8% 40% 10%;
+    grid-gap: 10px;
+    height: 100vh;
+
+    
+    top: 50%; /* Align the top of the gamePlate to the middle of the viewport */
+    left: 50%; /* Align the left of the gamePlate to the middle of the viewport */
+    transform: translate(0%, 14%); /* Center the gamePlate using translate */
+    /* Add other styles as needed */
+
+
+  }
+  
+  
+  .row {
+    /* border: 1px solid #000; */
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    
+  }
+  
+  .interactive {
+    text-align: center;
+  }
+  
+  .interactive button {
+    display: inline-block;
+    margin: 5px;
+    /* Add any other styles you need for the buttons */
+  }
+  
+ 
+
+  .headline {
+    /* background-color: #f2f2f2;*/
+  }
+
+  .ErrorText {
+    font-size: 14px;
+    color: rgb(212, 29, 29);
+}
+  
+  .middle {
+   /*  background-color: #d4d4d4; */
+    display: flex; /* Center the nested grid horizontally */
+    justify-content: center;
+    align-items: center; /* Center the nested grid vertically */
+  }
+  
+  /* Nested grid for the middle row */
+  .nested-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px; /* Increase the space between the cards */
+    justify-items: center; /* Center the cards horizontally within each column */
+  }
+  
+  .col {
+    /* To create spacing between the nested grid and the cards */
+    padding: 5px;
+  }
+  
+  .card {
+    border: 1px solid #000;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+    /* Set card width and height */
+    width: 100px;
+    height: 150px;
+  }
+
+
+  .row.lower {
+  
+    /* Add a white stroke with outer glow */
+    background-color: rgba(0, 29, 4, 0); /* Darker background color with opacity */
+    
+  }
+
+
+  /* headling styling */
+  .stageText {
+    font-size: 3rem; /* Set the font size to 3rem (adjust the value as needed) */
+    color: #fff; /* Set the text color to white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a drop shadow effect */
+    font-family: "Josefin Sans", sans-serif; /* Set the font-family as desired */
+    /* Add any other styles you want for the headline */
+
+  }
+  #gamePlayButton1{
+    background-color:rgb(166, 0, 0)
+  }
+
+  #gamePlayButton3{
+    background-color:rgb(33, 33, 33)
+
+  }
+  #gamePlayButton4{
+    display: none;
+
+  }
+
+  #gamePlayButton1 , #gamePlayButton2 , #gamePlayButton3 , #gamePlayButton4{
+    color: #fff; /* White text color */
+    font-size: 1.5rem;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px; /* Add spacing between the buttons */
+    transition: transform 0.2s, box-shadow 0.2s; /* Add smooth transition effects */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+    font-family: "Josefin Sans", Bold 700;
+  }
+
+  #gamePlayButton1:hover,
+  #gamePlayButton2:hover,
+  #gamePlayButton3:hover {
+    /* Add styles for hover effect */
+    transform: scale(1.1); /* Increase the button size on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a stronger box shadow on hover */
+  }
+
+  .arrowButton {
+    display: inline-block; /* Change to inline-block to keep buttons in one line */
+    color: #fff;
+    background-color: rgb(248, 223, 1);
+    font-size: 1.5rem;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: "Josefin Sans", Bold 700;
+  }
+  
+  .arrowButton:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .numberContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .numberDisplay {
+    font-size: 36px;
+    margin: 0 20px;
+    color: #ffffff;
+    /* Add some cool box-shadow effect */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+   
+    padding: 5px; /* Add some padding to give the text more space around */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+  }
+
+/*----------wrong answer popup----------- */
+.wrong-answer-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background with 70% opacity */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure the popup is on top of other content */
+  opacity: 0; /* Start with low opacity */
+  transition: opacity 0.5s ease-in-out; /* Transition for opacity change over 0.5 seconds */
+}
+  
+  .popup-content {
+    background-color: #272727; /* Dark gray background */
+    color: white; /* Text color */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: absolute;
+    max-width: 300px; /* Limit the maximum width of the popup */
+    top: 38%; /* Position it a bit higher than the center */
+    left: 50%; /* Position it halfway across the screen */
+    transform: translate(-50%, -50%); /* Center the popup using translation */
+  }
+  
+  .popup-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: rgb(243, 243, 243); /* Color of the close "X" */
+  }
+  
+  
+  #wrongGuessText {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fdfdfd; /* Reddish color for the wrong guess text */
+  }
+  
+  /* Style for the Restart button */
+  #restartButtonPopup {
+    background-color: #eeca00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin-top: 10px; /* Add space between the title and the button */
+  }
+  
+  #restartButtonPopup:hover {
+    background-color: #eea300;
+  }
+
+  .stage-popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%; /* Vertically centered */
+    left: 50%; /* Horizontally centered */
+    transform: translate(-50%, -50%);
+    background-color: transparent; /* No background color */
+    color: white; /* Text color */
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px; /* Adjust font size */
+    opacity: 0; /* Start with low opacity */
+    transition: opacity 1s, font-size 1s; /* Transition for animation */
+    z-index: 9999; /* Ensure the popup is on top of other content */
+    text-align: center; /* Center text horizontally */
+    line-height: 1.5; /* Adjust line height for vertical centering */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to text */
+  }
